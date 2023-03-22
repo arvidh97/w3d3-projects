@@ -49,6 +49,25 @@ def rec_fib(n)
   return [] if n == 0 
   return [0] if n == 1 
   return [0,1] if n == 2 
+  
+  last_fib = rec_fib(n-1)
+  last_fib << last_fib[-1] + last_fib[-2]  
+end
+
+def ity_fib(n)
+  fib_arr = [0, 1]
+  
+  (n-2).times do 
+    fib_arr << fib_arr[-1] + fib_arr[-2]
+  end
+  fib_arr
+end
+
+def bsearch(array, target)
+  midpoint = array.length/2
+  return nil if array.length == 0
+  return midpoint if array[midpoint] == target
 
   
+
 end

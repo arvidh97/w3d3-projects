@@ -64,10 +64,18 @@ def ity_fib(n)
 end
 
 def bsearch(array, target)
-  midpoint = array.length/2
-  return nil if array.length == 0
-  return midpoint if array[midpoint] == target
+  # midpoint = array.length/2
+  # return nil if array.length == 0
+  # return midpoint if array[midpoint] == target
+  # bttm = array[0...midpoint]
+  # top = array[midpoint+1..-1]
 
+  # if midpoint > target 
+  #   bsearch(bttm, target)
+  # else
+  #   bsearch(top,target)
+  # end
   
 
 end
+

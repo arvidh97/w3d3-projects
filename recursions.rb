@@ -14,6 +14,22 @@ def ity_sum(arr)
   sum
 end
 
-def exponent
-  
+def exp_1(b, n)
+  return 1 if n == 0
+
+  b * exp_1(b, n-1)
 end
+
+def exp_2(b, n)
+  return 1 if n == 0
+  return b if n == 1
+
+  even_ex = exp_2(b, n/2) 
+  odd_ex = exp_2(b, (n-1) / 2 )
+  if n.even?
+    return even_ex * even_ex
+  else
+    b * odd_ex * odd_ex
+  end
+end
+

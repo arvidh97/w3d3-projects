@@ -33,3 +33,22 @@ def exp_2(b, n)
   end
 end
 
+def deep_dup(array)
+  answer = [] 
+  array.each do |ele| 
+    if !ele.is_a?(Array) 
+      answer << ele
+    else
+      answer << deep_dup(ele)
+    end
+  end
+  answer
+end
+
+def rec_fib(n)
+  return [] if n == 0 
+  return [0] if n == 1 
+  return [0,1] if n == 2 
+
+  
+end

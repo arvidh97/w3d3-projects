@@ -82,3 +82,22 @@ def bsearch(array, target)
   end
 end
 
+def merge_sort(array)
+  midpoint = array.length/2
+  bttm = array[0...midpoint]
+  top = array[midpoint..-1]
+
+  # sorted_bttm = merge_sort(bttm)
+  # sorted_top = merge_sort(top)
+  return array if array.length == 1
+  
+
+  something = [merge_sort(bttm), merge_sort(top)]
+  merge(something)
+end
+
+def merge(array)
+
+end
+
+
